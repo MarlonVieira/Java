@@ -1,0 +1,10 @@
+
+public class ControlBonification {
+
+	private double soma;
+	
+		public void register(Gerente m) {
+			double boni = m.getbonificacao();
+			this.soma = this.soma + boni;
+		}
+}
