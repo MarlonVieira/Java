@@ -8,7 +8,7 @@ public class Testiii {
 		g1.setNome("Clide");
 		g1.setSalario(5000);
 
-		Funcionario f = new Funcionario();
+		Gerente f = new Gerente();
 		f.setSalario(2000);
 		
 		ControlBonification controle = new ControlBonification();
