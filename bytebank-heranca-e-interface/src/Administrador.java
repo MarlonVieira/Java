@@ -1,26 +1,25 @@
 
 public class Administrador extends Funcionario implements Autenticavel {
 		
-	private int senha;
+	private InterfaceAutenticacao Autenticador;
+	
+	public Administrador() {
+		this.Autenticador = new InterfaceAutenticacao();
+	}
 	
 	@Override
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.Autenticador.setSenha(senha);
 	}
 
 	@Override
 	public boolean autentica(int senha) {
-		if(this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-	}	
+		return this.Autenticador.autentica(senha);
+	}
 
 	@Override
 	public double getBonificacao() {
 		System.out.println("Chamando Método de bonificação do ADMINISTRADOR!");
 		return 50;
-	}
-	
+	}	
 }
